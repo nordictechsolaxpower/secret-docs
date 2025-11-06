@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Installationsguide</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 860px; margin: 2rem auto; padding: 0 1rem; line-height: 1.7; }
+    h1 { margin-bottom: 0.25rem; }
+    .muted { color: #6b7280; }
+    pre { background: #0b1021; color: #e5e7eb; padding: 1rem; overflow: auto; border-radius: 10px; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    a { color: #0f766e; }
+  </style>
+</head>
+<body>
+  <h1>Installationsguide</h1>
+  <p class="muted">Version 1.0 · Uppdaterad: 2025‑11‑06</p>
+
+  <h2>Syfte</h2>
+  <p>Denna guide beskriver hur du publicerar dokument på en hemlig GitHub Pages‑sajt, som inte indexeras av sökmotorer.</p>
+
+  <h2>Struktur</h2>
+  <pre><code>/ (root)
+├─ .nojekyll
+├─ robots.txt
+├─ index.html
+└─ public/
+   ├─ install_guide.html
+   └─ faq.pdf</code></pre>
+
+  <h2>Publicering</h2>
+  <ol>
+    <li>Lägg till filer via GitHub web (Add file → Upload files).</li>
+    <li>Commit → avvakta 30–60 sek för att Pages ska bygga.</li>
+    <li>Testa via din publicerade URL.</li>
+  </ol>
+
+  <h2>Säkerhet & sekretess</h2>
+  <ul>
+    <li><strong>Noindex</strong>: Varje sida har <code>&lt;meta name="robots" content="noindex, nofollow"&gt;</code>.</li>
+    <li><strong>robots.txt</strong>: <code>Disallow: /</code> blockerar indexering.</li>
+    <li><strong>Obskyr URL</strong>: Använd en svårgissad path, ex. <code>/a19h2d4/</code>.</li>
+  </ul>
+
+  <p><a href="../index.html">← Tillbaka</a></p>
+</body>
+</html>
